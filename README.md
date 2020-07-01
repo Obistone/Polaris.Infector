@@ -9,6 +9,13 @@ Simply click on on the "File To Infect" input field and select your preferred .N
 
 Once done, you'll need to have a direct link to your executable file of choice. This file will be downloaded, dropped, and executed.
 
+# Credits
+
+Thanks to [NotSoonTM](https://github.com/NotSoonTM/ "NotSoonTM") for helping me a ton with this project.
+
+This project implements [dnlib](https://github.com/0xd4d/dnlib "dnlib") for the injection, [MaterialDesignInXaml](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit "MaterialDesignInXaml") for UI, and [Costura.Fody](https://github.com/Fody/Costura "Costura.Fody") for assembly linking.
+
+
 # Disclaimer
 
 This is simply a PoC, it is not meant for practical use. 
