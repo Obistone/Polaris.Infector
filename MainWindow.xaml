@@ -1,0 +1,50 @@
+﻿<Window x:Class="Polaris.Infector.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Polaris.Infector"
+        mc:Ignorable="d"
+        Title="Version: 1.0.0" Height="260" Width="539.66" WindowStartupLocation="CenterScreen"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="55"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="56"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                          Mode="Standard" DockPanel.Dock="Top">
+            <DockPanel>
+                <TextBlock 
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center" 
+                    FontSize="21"
+                    AutomationProperties.Name="Material Design In XAML Toolkit">
+                    Polaris Infector</TextBlock>
+            </DockPanel>
+        </materialDesign:ColorZone>
+
+        <TextBlock Text="File to Infect (.NET Executable):" Grid.Row="1" Margin="5,5,0,0"></TextBlock>
+        <TextBox x:Name="FileToInfectTextBox" Text="..." Grid.Row="1" Margin="5,19,5,0" 
+                 PreviewMouseLeftButtonDown="FileToInfectTextBox_PreviewMouseLeftButtonDown" IsReadOnly="True"></TextBox>
+
+        <TextBlock Text="Direct Link:" Grid.Row="2" Margin="5,5,0,0"></TextBlock>
+        <TextBox x:Name="DirectLinkTextBox" Text="https://example.com/file.exe" Grid.Row="2" Margin="5,19,5,0"></TextBox>
+
+        <Button x:Name="InfectButton" Content="Infect" Grid.Row="3"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Width="150" Margin="0,20,0,0" Click="InfectButton_Click" 
+                materialDesign:ShadowAssist.ShadowDepth="Depth1" IsEnabled="False"></Button>
+    </Grid>
+</Window>
